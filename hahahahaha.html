@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi Menghitung Cinta</title>
+    <script>
+        function hitungCinta(nama1, nama2) {
+            const total = (nama1.length + nama2.length) % 100;
+            return total;
+        }
+
+        function tampilkanHasil() {
+            const nama1 = document.getElementById("nama1").value;
+            const nama2 = document.getElementById("nama2").value;
+            const hasil = hitungCinta(nama1, nama2);
+            document.getElementById("hasil").innerText = "Persentase Cinta: " + hasil + "%";
+        }
+    </script>
+</head>
+<body>
+    <h1>Hitung Cinta</h1>
+    <label for="nama1">Nama Pertama:</label>
+    <input type="text" id="nama1" required>
+    <br>
+    <label for="nama2">Nama Kedua:</label>
+    <input type="text" id="nama2" required>
+    <br>
+    <button onclick="tampilkanHasil()">Hitung</button>
+    <p id="hasil"></p>
+</body>
+</html>
